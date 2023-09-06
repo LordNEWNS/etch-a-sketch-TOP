@@ -6,13 +6,31 @@
         <link rel="stylesheet" href="style.css">
         <script src="script.js" defer></script>
     </head>
-    <body>
+    <body id="body">
         <header>
 
         </header>
+        <div id="selectSettings">
+           <div class="setup">
+                <label for="height">Height of grid</label>
+                <input type="number" name="height" id="height">
+                
+           </div>
+            <div class="setup">
+                <label for="width">Width of grid</label>
+                <input type="number" name='width' id="width">
+                
+            </div>
+            <div class="setup">
+                <label for="gridPeiceSize">Size of grid peices (default 8)</label>
+                <input type="number" name="pixle size" id="gridPeiceSize">
+                
+            </div>
+        </div>
         <main id="grid">
 
         </main>
+        <div class="filler"></div>
         <footer>
 
         </footer>

@@ -1,6 +1,27 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+}
+
 body {
     display: flex;
     min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+.filler {
+    flex: 1;
+}
+
+header {
+    height: 60px;
+    background: linear-gradient(170deg, grey, grey 70%, black 80%);
+}
+
+footer {
+    height: 10px;
+    background: linear-gradient(170deg, grey, grey 70%, black 80%);
 }
 
 #grid {
@@ -19,3 +40,13 @@ body {
     background-color: rgb(161, 161, 161);
 }
 
+input, label {
+    display: block;
+}
+
+#selectSettings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-self: center;
+}
