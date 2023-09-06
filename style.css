@@ -6,16 +6,16 @@ body {
 #MAIN {
     display: flex;
     flex-wrap: wrap;
-    width: 608px;
-    height: 608px;
+    width: 128px;
+    height: 128px;
     border: solid rgb(92, 92, 92) 2px;
 }
 
 .etchGrid {
     padding: 0;
     margin: 0;
-    width: 38px;
-    height: 38px;
+    width: 8px;
+    height: 8px;
     transition-delay: 300ms;
     background-color: rgb(161, 161, 161);
 }
