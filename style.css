@@ -44,9 +44,34 @@ input, label {
     display: block;
 }
 
-#selectSettings {
+#options {
+    width: 633px;
+    margin-top: 10px;
+    padding: 15px;
     display: flex;
     flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
+    height: 110px;
+    background-color: rgb(75, 149, 245);
+    border: solid black 2px;
+    border-radius: 20px;
+}
+
+#settingsBar {
+    display: flex;
     gap: 10px;
+}
+
+#settingsBar .filler {
+    flex: 1;
+}
+
+.colorselect {
+    width: 177px;
     align-self: center;
+}
+
+.setup {
+    text-align: center;
 }
