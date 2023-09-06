@@ -3,7 +3,7 @@ body {
     min-height: 100vh;
 }
 
-#MAIN {
+#grid {
     display: flex;
     flex-wrap: wrap;
     width: 128px;
@@ -11,7 +11,7 @@ body {
     border: solid rgb(92, 92, 92) 2px;
 }
 
-.etchGrid {
+.etchGridPeice {
     padding: 0;
     margin: 0;
     width: 8px;
@@ -20,7 +20,7 @@ body {
     background-color: rgb(161, 161, 161);
 }
 
-.etchGrid:hover {
+.etchGridPeice:hover {
     background-color: black;
     transition: ease-in 1ms;
 }
