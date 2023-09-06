@@ -16,5 +16,11 @@ body {
     margin: 0;
     width: 38px;
     height: 38px;
+    transition-delay: 300ms;
     background-color: rgb(161, 161, 161);
+}
+
+.etchGrid:hover {
+    background-color: black;
+    transition: ease-in 1ms;
 }
