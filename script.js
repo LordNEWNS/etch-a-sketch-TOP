@@ -33,6 +33,7 @@ options.addEventListener('click', () => {
         heightOfGrid = chosenHeight;
         colourOfGrid = chosenGridColor;
         etchBody.style.backgroundColor = chosenBorderColour;
+        grid.style.backgroundColor = chosenGridColor;
     };
 
     if (rainbowMode !== true){
