@@ -10,6 +10,41 @@ body {
     margin: 0;
 }
 
+.etchASketchArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+.etchASketchBody {
+    padding: 40px;
+    background-color: red;
+}
+.etchASketchNobs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nobR,
+.nobL {
+    background-color: white;
+    height: 35px;
+    width: 35px;
+    margin-top: 15px;
+    border: dotted black;
+    border-radius: 20px;
+    margin-bottom: -45px;
+}
+
+.nobL {
+    margin-left: -35px;
+}
+
+.nobR {
+    margin-right: -35px;
+}
+
 .filler {
     flex: 1;
 }
@@ -46,7 +81,7 @@ input, label {
 
 .boxForOptions {
     text-align: center;
-    margin-top: 10px;
+    margin: 15px;
     border: solid black 2px;
     border-radius: 20px;
     padding: 10px;
