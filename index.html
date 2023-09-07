@@ -18,21 +18,21 @@
                 
                     <div class="setup">
                          <label for="height">Height of grid</label>
-                         <input type="number" name="height" id="height">
+                         <input value="16" type="number" name="height" id="height">
                          
                     </div>
                      <div class="setup">
                          <label for="width">Width of grid</label>
-                         <input type="number" name='width' id="width">
+                         <input value="16" type="number" name='width' id="width">
                          
                      </div>
                      <div class="setup">
-                         <label for="gridPeiceSize">Size of grid peices (default 8)</label>
-                         <input type="number" name="pixle size" id="gridPeiceSize">
+                         <label for="gridPeiceSize">Size of grid peices</label>
+                         <input value="8" type="number" name="pixle size" id="gridPeiceSize">
                      </div>
                      <div class="setup">
                          <label for="borderColor">Colour of Etch-A-Aketch</label>
-                         <input class="colorselect" type="color" name="borderColor" id="borderColor">
+                         <input value="#FF0000" class="colorselect" type="color" name="borderColor" id="borderColor">
                      </div>
                      <div class="setup">
                          <label for="sketchColour">Colour of sketch</label>
@@ -47,11 +47,11 @@
             <div class="filler"></div>
         </div>
         <div class="etchASketchArea">
-            <div class="etchASketchBody">
+            <div id="etchASketchBody">
                 <p class="name">Etch-A-Sketch</p>
-                <main id="grid">
+                <div id="grid">
 
-                </main>
+                </div>
                 <div class="etchASketchNobs">
                     <div class="nobL"></div>
                     <div class="nobR"></div>
