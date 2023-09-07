@@ -35,14 +35,12 @@ options.addEventListener('click', () => {
         etchBody.style.backgroundColor = chosenBorderColour;
     };
 
-    if (rainbowMode !== true && shadeMode !== true){
+    if (rainbowMode !== true){
         colourOfSketch = chosenSketchColor;
         creatGameBoard();
-    } else if (rainbowMode === true && shadeMode !== true) {
-        rainbowBoard();
     } else {
-
-    }
+        rainbowBoard();
+    };
 
 })
 
@@ -78,9 +76,18 @@ function creatGameBoard() {
     etchGridPeice[i].style.backgroundColor = colourOfGrid;
     etchGridPeice[i].style.height = gridPeiceSize + 'px';
     etchGridPeice[i].style.width = gridPeiceSize + 'px';
-    etchGridPeice[i].addEventListener('mouseenter', function(e) {
-        e.target.style.backgroundColor = colourOfSketch;
-    });
+    etchGridPeice[i].addEventListener('mouseenter', colourOnce);
+    if (shadeMode === true) {
+        etchGridPeice[i].addEventListener('mouseenter', setopacity)
+        etchGridPeice[i].addEventListener('mouseenter', function(e) {
+
+            // get current opacity value and add 0.1 to it
+           let currentOpacity = parseFloat(e.target.style.opacity);
+           currentOpacity += 0.1;
+           e.target.style.opacity = currentOpacity; 
+        })
+    }
+    
    };
 
 };
@@ -101,12 +108,36 @@ function rainbowBoard() {
     etchGridPeice[i].style.backgroundColor = colourOfGrid;
     etchGridPeice[i].style.height = gridPeiceSize + 'px';
     etchGridPeice[i].style.width = gridPeiceSize + 'px';
-    etchGridPeice[i].addEventListener('mouseenter', function(e) {
-        e.target.style.backgroundColor = RandomColour();
-    });
+    etchGridPeice[i].addEventListener('mouseenter', colourOnceRainbow);
+    if (shadeMode === true) {
+        etchGridPeice[i].addEventListener('mouseenter', setopacity)
+        etchGridPeice[i].addEventListener('mouseenter', function(e) {
+
+            // get current opacity value and add 0.1 to it
+           let currentOpacity = parseFloat(e.target.style.opacity);
+           currentOpacity += 0.1;
+           e.target.style.opacity = currentOpacity; 
+        })
+    }
    };
 
 };
+
+function setopacity(e) {
+    e.target.style.opacity = 0.1;
+    e.target.removeEventListener('mouseenter', setopacity);
+}
+
+function colourOnce(e) {
+    e.target.style.backgroundColor = colourOfSketch;
+    e.target.removeEventListener('mouseenter', colourOnce);
+}
+
+function colourOnceRainbow(e) {
+    e.target.style.backgroundColor = RandomColour();
+    e.target.removeEventListener('mouseenter', colourOnceRainbow)
+
+}
 
 function randomrgbValue() {
     return(Math.floor(Math.random() * 256))
@@ -118,5 +149,7 @@ function RandomColour() {
     const blue = randomrgbValue()
     return('rgba(' + red + ', ' + green + ', ' + blue + ')')
 }
+
+
    
 creatGameBoard();
