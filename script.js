@@ -1,12 +1,12 @@
 const grid = document.getElementById('grid');
 const body = document.getElementById('body');
 const options = document.getElementById('submit')
+const etchBody = document.getElementById('etchASketchBody')
 let heightOfGrid = 80;
 let widthOfGrid = 120;
 let gridPeiceSize = 4;
 let colourOfGrid = '#EFEFEF';
 let colourOfSketch = 'black';
-let colorOfBorder = 'red'
 
 
 options.addEventListener('click', () => {
@@ -29,6 +29,7 @@ options.addEventListener('click', () => {
         colorOfBorder = chosenBorderColour;
         colourOfGrid = chosenGridColor;
         colourOfSketch = chosenSketchColor;
+        etchBody.style.backgroundColor = chosenBorderColour;
         creatGameBoard();
     }
 
