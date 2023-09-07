@@ -32,7 +32,7 @@ body {
 }
 
 .confirmbutton {
-    margin-left: 90px;
+    flex: 1;
     
 }
 
@@ -45,7 +45,7 @@ body {
 }
 
 .settingstitle {
-    margin-left: 250px;
+    flex: 1;
     
 }
 
@@ -111,6 +111,29 @@ footer {
 
 input, label {
     display: block;
+}
+
+.specialSettings input,
+.specialSettings label {
+    display: inline;
+}
+
+.specialSettings input {
+    width: 15px;
+    height: 15px;
+}
+
+.specialSettings1 .specialSettings {
+    text-align: left;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    margin-left: 18px;
+}
+
+.specialSettings1 {
+    flex: 1;
 }
 
 .boxForOptions {
