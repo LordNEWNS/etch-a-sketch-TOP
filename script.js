@@ -10,14 +10,18 @@ let colorOfBorder = 'red'
 
 
 options.addEventListener('click', () => {
-    const chosenWidth = document.getElementById('width').value;
-    const chosenHeight = document.getElementById('height').value;
-    const chosenGridPeiceSize = document.getElementById('gridPeiceSize').value;
+    const chosenWidth = parseInt(document.getElementById('width').value);
+    const chosenHeight = parseInt(document.getElementById('height').value);
+    const chosenGridPeiceSize = parseInt(document.getElementById('gridPeiceSize').value);
     const chosenBorderColour = document.getElementById('borderColor').value;
     const chosenGridColor = document.getElementById('gridColor').value;
     const chosenSketchColor = document.getElementById('sketchColor').value;
-    if (chosenWidth > 200 || chosenHeight > 100) {
-        alert('Max width 200 max height 100');
+    if (chosenWidth > 200 
+        || chosenHeight > 100 
+        || chosenHeight < 1 
+        || chosenWidth < 1 
+        || chosenGridPeiceSize < 1) {
+        alert('Max/Min width 200/1 | Max/Min height 100/1 | Min peice size 1');
     } else {
         gridPeiceSize = chosenGridPeiceSize;
         widthOfGrid = chosenWidth;
