@@ -26,6 +26,29 @@ body {
     text-align: center;
 }
 
+.ahh {
+    display: flex;
+    align-items: center;
+}
+
+.confirmbutton {
+    margin-left: 90px;
+    
+}
+
+#submit {
+    padding: 3px 8px;
+    border-radius: 7px;
+    background-color: rgb(127, 193, 255);
+    font-size: 17px;
+
+}
+
+.settingstitle {
+    margin-left: 250px;
+    
+}
+
 #etchASketchBody p {
     margin-bottom: 10px;
     margin-top: -36px;
