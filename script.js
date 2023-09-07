@@ -1,7 +1,9 @@
 const grid = document.getElementById('grid');
 const body = document.getElementById('body');
-const options = document.getElementById('submit')
-const etchBody = document.getElementById('etchASketchBody')
+const options = document.getElementById('submit');
+const etchBody = document.getElementById('etchASketchBody');
+const header = document.getElementById('header')
+const footer = document.getElementById('footer')
 let heightOfGrid = 80;
 let widthOfGrid = 120;
 let gridPeiceSize = 4;
@@ -39,10 +41,14 @@ function creatGameBoard() {
     grid.style.height = (heightOfGrid * gridPeiceSize) + 'px';
     grid.style.width = (widthOfGrid * gridPeiceSize) + 'px';
 
+    // colour header and footer
+    footer.style.background = 'linear-gradient(170deg, ' + colourOfGrid + ', ' + colourOfGrid +' 70%, ' + colourOfSketch + ' 80%';
+        header.style.background = 'linear-gradient(170deg, ' + colourOfGrid + ', ' + colourOfGrid +' 70%, ' + colourOfSketch + ' 80%';
+
     // remove old grid
     while (grid.firstChild) {
         grid.firstChild.remove()
-    } 
+    } ;
 
     // creat new grid to spec
     for (let i = 1; i <= (heightOfGrid * widthOfGrid); i++) {
